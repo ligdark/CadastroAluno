@@ -1,8 +1,10 @@
 package com.example.williancordeiro.cadastroaluno;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -41,5 +43,25 @@ public class ListaAlunos extends ActionBarActivity {
                 return true;
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_lista_alunos, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int itemClicado = item.getItemId();
+
+        switch (itemClicado){
+            case R.id.novo:
+                Intent i = new Intent(this, Formulario.class);
+                startActivity(i);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
