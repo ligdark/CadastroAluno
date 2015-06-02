@@ -29,7 +29,7 @@ public class ListaAlunos extends ActionBarActivity {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(ListaAlunos.this, "Clique na posição " + position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(ListaAlunos.this, "Clique na posicao " + position, Toast.LENGTH_SHORT).show();
             }
         });
 
